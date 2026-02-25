@@ -1,0 +1,5 @@
+{
+  "name": "Dhamma Avasa Management 02",
+  "description": "A comprehensive management tool for Vipassana courses at Dhamma Avasa, Latur. Features include Marathi translation, student classification, seniority-based sorting, room assignment, and intelligent hall seating arrangements.",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="mr" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://vitejs.dev/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dhamma Avasa Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                indigo: '#6366f1',
+                slate: '#0f172a',
+                black: '#000000'
+              }
+            },
+            boxShadow: {
+              'soft': '0 10px 30px -5px rgba(0, 0, 0, 0.05), 0 4px 15px -5px rgba(0, 0, 0, 0.03)',
+              'button': '0 4px 12px rgba(148, 163, 184, 0.2)',
+              'premium': '0 25px 50px -12px rgba(0, 0, 0, 0.08)',
+              'glow': '0 0 40px rgba(99, 102, 241, 0.25)',
+              'card-hover': '0 40px 80px -15px rgba(99, 102, 241, 0.2)'
+            },
+            animation: {
+              'fade-up': 'fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'fade-in': 'fadeIn 0.5s ease-out forwards',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&family=Mukta:wght@300;400;500;600;700;800&family=Noto+Serif+Devanagari:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --brand-primary: #6366f1;
+        --brand-secondary: #a855f7;
+      }
+
+      body {
+        font-family: 'Outfit', sans-serif;
+        background-color: #fcfdfe;
+        transition: background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1), color 0.6s ease;
+        background-image: 
+          radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.05) 0px, transparent 50%),
+          radial-gradient(at 100% 100%, rgba(168, 85, 247, 0.05) 0px, transparent 50%);
+        background-attachment: fixed;
+        color: #0f172a;
+        margin: 0;
+        min-height: 100vh;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+
+      .font-report-mukta { font-family: 'Mukta', sans-serif !important; }
+      .font-report-khand { font-family: 'Khand', sans-serif !important; }
+      .font-report-noto { font-family: 'Noto Serif Devanagari', serif !important; }
+
+      .hide-scrollbar::-webkit-scrollbar { display: none; }
+      .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+      @media print {
+        @page { margin: 0 !important; }
+        body, #root { background: white !important; color: black !important; padding: 0 !important; margin: 0 !important; }
+        .no-print { display: none !important; }
+        * { box-shadow: none !important; border-radius: 0 !important; overflow: visible !important; }
+      }
+
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      .stagger-1 { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards; opacity: 0; }
+      .stagger-2 { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards; opacity: 0; }
+      .stagger-3 { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards; opacity: 0; }
+      .stagger-4 { animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards; opacity: 0; }
+
+      .hover-lift {
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      .hover-lift:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 30px 60px -12px rgba(99, 102, 241, 0.15);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.39.0",
+    "uuid": "https://esm.sh/uuid@^13.0.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
